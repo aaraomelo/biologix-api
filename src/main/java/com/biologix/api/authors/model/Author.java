@@ -1,4 +1,4 @@
-package com.biologix.api.entity;
+package com.biologix.api.authors.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
