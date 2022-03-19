@@ -1,4 +1,4 @@
-package com.biologix.api.authors.model;
+package com.biologix.api.books.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Author {
+public class Book {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,26 +17,37 @@ public class Author {
   private String name;
 
   @Column(nullable = false)
-  private String nationality;
+  private String genre;
 
-  public Long getId() {
-    return id;
-  }
+  @Column(nullable = false)
+  private String author;
 
   public String getName() {
     return name;
+  }
+
+  public Long getId() {
+    return id;
   }
 
   public void setName(String name) {
     this.name = name;
   }
 
-  public String getNationality() {
-    return nationality;
+  public String getGenre() {
+    return genre;
   }
 
-  public void setNationality(String nationality) {
-    this.nationality = nationality;
+  public void setGenre(String genre) {
+    this.genre = genre;
+  }
+
+  public String getAuthor() {
+    return author;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
   }
 
 }
