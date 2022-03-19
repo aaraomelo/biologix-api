@@ -18,3 +18,19 @@ The following guides illustrate how to use some features concretely:
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
+### Using API
+
+POST http://localhost:8080/authors
+{
+	"name": "Aarão Lopes",
+	"nationality": "BR"
+}
+
+POST http://localhost:8080/books
+{
+	"name": "Java Fundamentals",
+	"genre": "Programming Language",
+    "author": {
+		"id": 1
+	},
+}
